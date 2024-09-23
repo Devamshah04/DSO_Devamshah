@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        registry = "yourdockerhubusername/yourimagename"
+        registry = "devamshah04/myapp"
         registryCredential = 'dockerhub'
         dockerImage = ''
     }
@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Cloning Git') {
             steps {
-                git 'https://github.com/yourusername/yourrepository.git'
+                git 'https://github.com/Devamshah04/DSO_Devamshah.git'
             }
         }
         stage('Building Docker Image') {
